@@ -12,7 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css">
-
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
    </head>
 <body>
   
@@ -23,7 +24,7 @@
       <img src="halo bg 2.jpg" alt="">
         <div class="text">
           <span class="text-1">Every new event is a <br> new adventure</span>
-          <span class="text-2">Let battles begin!</span>
+          <span class="text-2">Let's calibrate our senses!</span>
         </div>
       </div>
       <div class="back">
@@ -37,16 +38,17 @@
     <div class="forms">
         <div class="form-content">
           <div class="login-form">
-            <div class="title">Register</div>
-          <form action="#">
+            <div class="title">Register Team Leader</div>
+          <form action="#" id="register">
             <div class="input-boxes">
+              
               <div class="input-box">
                 <i class="fas fa-user"></i>
-                <input type="text" id="name" placeholder="Name" required>
+                <input type="text" id="name" placeholder="Team Leader Name" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" id="email" placeholder=" Email" required>
+                <input type="email" id="email" placeholder=" Email" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-id-card"></i>
@@ -54,83 +56,69 @@
               </div>
               <div class="input-box">
                 <i class="fas fa-phone-alt"></i>
-                <input type="text" id="phone" placeholder="Phone number" required>
+                <input type="text" id="phone" placeholder="Phone number" maxlength="10" required>
               </div>
-              <div class="input-box">
-                <i class="fas fa-pen"></i>
-                <input type="text" placeholder="Branch" required>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-user-graduate"></i>
-                <input type="number" placeholder="Semester" required>
-              </div>
+            
+             
+              <p>Please select an event</p>
+              <div id="reg">
               
-          <div class = " multi_select_box ">
+              
+                <input type="radio" value="display" name="event" onclick="display()">
+                <label for="decode">D-CODE</label>
+                
+              
+               <br>
+              </div>
+             <div id="reg_1">
+              <input type="radio" id="binary rash" name="event" onclick="display_1()">
+              <label for="binary rash">BINARY RASH</label>
+              <br>
+              </div>
+              <div id="reg_2">
+              <input type="radio" id="init_rc" name="event" onclick="display_2()">
+              <label for="init_rc">INIT_RC</label>
+              <br>
+             </div>
+             <div id="reg_3">
+              <input type="radio" id="paper presentation" name="event" onclick="display_3()">
+              <label for="paper presentation">PAPER PRESENTATION</label>
+              <br>
+             </div>
+             <div id="reg_4">
+              <input type="radio" id="decode" name="event" onclick="display_4()">
+              <label for="project symposium">PROJECT SYMPOSIUM</label>
+              <br>
+             </div>
+             <div id="reg_5">
+              <input type="radio" id="decode" name="event" onclick="display_5()">
+              <label for="arduino clash">ARDUINO CLASH</label>
+              <br>
+              </div>
+              <div id="reg_6">
+              <input type="radio" id="decode" name="event" onclick="display_6()">
+              <label for="spardha">SPARDHA</label>
+              
+             </div>
+              
            
-            <select class="selectpicker" multiple>
-                <option>D-CODE</option>
-                <option>BINARY RASH</option>
-                <option>INIT_RC</option>
-                <option>ARDUINO CLASH</option>
-                <option>PAPER PRESENTATION</option>
-                <option>PROJECT SYMPOSIUM</option>
-                <option>FUN EVENT</option>
-              </select>
-           </div>
+                
                
-           
-        
+             
               
-              <div class="button input-box">
-                <input type="submit" value="Submit">
-              </div>
-              <div class="text sign-up-text">Register your team !<label for="flip">Register now</label></div>
-            </div>
+               <div class="button input-box">
+                <input type="submit">Submit</button>
+             
+    
+               </div>
+              
+             
+             
             <script src="script.js"></script>
         </form>
       </div>
-        <div class="signup-form">
-          <div class="title">Team</div>
-        <form action="#">
-            <div class="input-boxes">
-              <div class="input-box">
-                <i class="fas fa-user"></i>
-                <input type="text" placeholder="Team member 1" required>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-id-card"></i>
-                <input type="text" placeholder="USN" required>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-user"></i>
-                <input type="text" placeholder="Team member 2" required>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-id-card"></i>
-                <input type="text" placeholder="USN" required>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-user"></i>
-                <input type="text" placeholder="Team member 3" required>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-id-card"></i>
-                <input type="text" placeholder="USN" required>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-user"></i>
-                <input type="text" placeholder="Team member 4" required>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-id-card"></i>
-                <input type="text" placeholder="USN" required>
-              </div>
-              <div class="button input-box">
-                <input type="submit" value="Submit">
-              </div>
-              <div class="text sign-up-text">Register yourself ! <label for="flip"> Register now</label></div>
-            </div>
-      </form>
+       
+     
     </div>
     </div>
     </div>
@@ -139,10 +127,33 @@
  <script src = " https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
-<script>
-    $(document).ready(function(){
-    $('.multi_select').selectpicker();
-})
+
+<script src= " https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="/__/firebase/7.14.5/firebase-app.js"></script>
+<script src="firebase.js"></script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCk816bJzpSSg2f3UsAmf62OpGQCviHlzY",
+    authDomain: "registration-a8bec.firebaseapp.com",
+    projectId: "registration-a8bec",
+    storageBucket: "registration-a8bec.appspot.com",
+    messagingSenderId: "794172480383",
+    appId: "1:794172480383:web:0ca00f7d8cac167eead84a",
+    measurementId: "G-WQQ0SFW3C5"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app); 
 
 </script>
  
