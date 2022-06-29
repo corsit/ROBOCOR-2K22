@@ -227,3 +227,30 @@ body{
 .selectpicker{
   box-sizing: 40px;
 }
+
+.price_1{
+  margin-left: 200px;
+}
+.price_2{
+  margin-left: 164px;
+}
+.price_3{
+  margin-left: 200px;
+}
+.price_4{
+  margin-left: 100px;
+}
+.price_5{
+  margin-left: 100px;
+}
+.price_6{
+  margin-left: 140px;
+}
+.price_7{
+  margin-left: 190px;
+}
+
+#reg{
+  margin: 10px;
+  border: 2px solid red;
+}

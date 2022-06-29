@@ -1,10 +1,17 @@
 
     
 function display() {  
-    var data="Team member 1:<br><input type='text' name='name'><br>USN:<br><input type='text' USN='USN'><br>";  
-     
+    let reg=document.getElementById("reg");
+    
+    var data=
+    " Team member 1:<br><input type='text' name='name'><br>USN:<br><input type='text' USN='USN'><br>";  
+    reg.innerHTML="D-CODE<br>";
       
-    document.getElementById('reg').innerHTML=data;  
+    document.getElementById('reg').innerHTML+=data; 
+    document.getElementById("reg").style.display="flex";
+    ``
+
+   
      }  
 function display_1() {  
   var data="Team member 1:<br><input type='text' name='name'><br>USN:<br><input type='text' USN='USN'><br>Team member 2:<br><input type='text' name='name'><br>USN:<br><input type='text' USN='USN'><br>Team member 3:<br><input type='text' name='name'><br>USN:<br><input type='text' USN='USN'><br>";  
